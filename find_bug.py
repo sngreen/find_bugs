@@ -155,7 +155,7 @@ def main():
     fb.createTable()
     fb.readLandscape()
     fb.findBug()
-    #fb.removeDb() 
+    fb.removeDb() 
     
 if __name__ == '__main__':
     main()
