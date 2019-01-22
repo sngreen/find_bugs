@@ -122,11 +122,6 @@ class FindBug:
                         body = match_body.start()
                         self.insertRow(lnumber, "body", body)
                         
-                #match_body = re.search(self.body, line)
-                #    
-                #if match_body:
-                #    body = match_body.start()
-                #    self.insertRow(lnumber, "body", body)  
                 lnumber += 1
                     
     def findBug(self):
