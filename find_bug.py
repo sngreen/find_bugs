@@ -28,7 +28,6 @@ class FindBug:
         
         self.legs = '\|\ \|'
         self.body = '###O'
-        self.db = "FindBug.db"
         self.db = sys.argv[0].replace(".py", ".db")
         
     def collectArgs(self):
