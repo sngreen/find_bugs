@@ -117,12 +117,16 @@ class FindBug:
                     if match_legs:
                         legs = match_legs.start()
                         self.insertRow(lnumber, "legs", legs)
-                            
-                match_body = re.search(self.body, line)
-                    
-                if match_body:
-                    body = match_body.start()
-                    self.insertRow(lnumber, "body", body)  
+                for match_body in re.finditer(self.body, line):
+                    if match_body:
+                        body = match_body.start()
+                        self.insertRow(lnumber, "body", body)
+                        
+                #match_body = re.search(self.body, line)
+                #    
+                #if match_body:
+                #    body = match_body.start()
+                #    self.insertRow(lnumber, "body", body)  
                 lnumber += 1
                     
     def findBug(self):
@@ -156,7 +160,7 @@ def main():
     fb.createTable()
     fb.readLandscape()
     fb.findBug()
-    fb.removeDb() 
+    #fb.removeDb() 
     
 if __name__ == '__main__':
     main()
