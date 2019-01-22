@@ -25,7 +25,6 @@ class NotFound(Exception):
 class FindBug:
     def __init__(self):
         """FindBug main class"""
-        
         self.legs = '\|\ \|'
         self.body = '###O'
         self.db = sys.argv[0].replace(".py", ".db")
